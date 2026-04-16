@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Moment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f1ec;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 30px 60px;
+            position: relative;
+        }
+
+        /* Góc giấy xé */
+        .corner-top-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 220px;
+            height: 140px;
+            background: #a96d2d;
+            clip-path: polygon(35% 0, 100% 0, 100% 100%, 65% 75%);
+            z-index: 1;
+        }
+
+        .corner-top-right::after {
+            content: "";
+            position: absolute;
+            left: -20px;
+            top: 18px;
+            width: 190px;
+            height: 95px;
+            background: #d8d3cd;
+            clip-path: polygon(35% 0, 100% 0, 100% 100%, 60% 75%);
+            opacity: 0.8;
+        }
+
+        .corner-bottom-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 220px;
+            height: 140px;
+            background: #a96d2d;
+            clip-path: polygon(0 0, 35% 25%, 65% 100%, 0 100%);
+            z-index: 1;
+        }
+
+        .corner-bottom-left::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -18px;
+            width: 185px;
+            height: 105px;
+            background: #d8d3cd;
+            clip-path: polygon(0 0, 30% 20%, 62% 100%, 0 100%);
+            opacity: 0.8;
+        }
+
+        /* Lưới nền */
+        .grid-bg {
+            position: absolute;
+            top: 30px;
+            right: 110px;
+            width: 420px;
+            height: 250px;
+            background-image:
+                linear-gradient(to right, rgba(120,120,120,0.25) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(120,120,120,0.25) 1px, transparent 1px);
+            background-size: 28px 28px;
+            z-index: 0;
+        }
+
+        .grid-bg-2 {
+            position: absolute;
+            top: 320px;
+            left: 280px;
+            width: 250px;
+            height: 300px;
+            background-image:
+                linear-gradient(to right, rgba(120,120,120,0.25) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(120,120,120,0.25) 1px, transparent 1px);
+            background-size: 28px 28px;
+            z-index: 0;
+        }
+
+        .layout {
+            position: relative;
+            min-height: 750px;
+            z-index: 2;
+        }
+
+        .text-box {
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            width: 340px;
+        }
+
+        .text-box h1 {
+            font-size: 60px;
+            font-family: "Brush Script MT", "Segoe Script", cursive;
+            color: #2c1f1a;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .text-box p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #2f2b28;
+            margin-bottom: 18px;
+        }
+
+        .text-box .tag {
+            font-size: 15px;
+            color: #2f2b28;
+        }
+
+        .photo {
+            position: absolute;
+            background: #000;
+            padding: 10px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+        }
+
+        .photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .p1 {
+            top: 70px;
+            left: 510px;
+            width: 220px;
+            height: 140px;
+        }
+
+        .p2 {
+            top: 125px;
+            left: 760px;
+            width: 360px;
+            height: 210px;
+        }
+
+        .p3 {
+            top: 225px;
+            left: 515px;
+            width: 220px;
+            height: 150px;
+        }
+
+        .p4 {
+            top: 350px;
+            left: 65px;
+            width: 190px;
+            height: 130px;
+        }
+
+        .p5 {
+            top: 340px;
+            left: 280px;
+            width: 140px;
+            height: 235px;
+        }
+
+        .p6 {
+            top: 430px;
+            left: 540px;
+            width: 300px;
+            height: 220px;
+        }
+
+        .p7 {
+            top: 430px;
+            left: 860px;
+            width: 310px;
+            height: 220px;
+        }
+
+        @media (max-width: 1100px) {
+            .layout {
+                min-height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .text-box,
+            .photo {
+                position: static;
+                width: 100%;
+                height: auto;
+            }
+
+            .photo {
+                max-width: 600px;
+            }
+
+            .photo img {
+                height: auto;
+                aspect-ratio: 16/10;
+            }
+
+            .grid-bg,
+            .grid-bg-2,
+            .corner-top-right,
+            .corner-bottom-left {
+                display: none;
+            }
+
+            .text-box h1 {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="corner-top-right"></div>
+    <div class="corner-bottom-left"></div>
+    <div class="grid-bg"></div>
+    <div class="grid-bg-2"></div>
+
+    <div class="page">
+        <div class="layout">
+            <div class="text-box">
+                <h1>Romantic Moment</h1>
+                <p>
+                    With you, time feels softer, the air sweeter, and the world a little less chaotic.
+                    I don’t know how love should feel, but if it feels like peace — then I’ve found it in you.
+                </p>
+                <div class="tag">@reallygreatsite</div>
+            </div>
+
+            <div class="photo p1">
+                <img src="anhmot.jpg" alt="Ảnh 1">
+            </div>
+
+            <div class="photo p2">
+                <img src="anhhai.jpg" alt="Ảnh 2">
+            </div>
+
+            <div class="photo p3">
+                <img src="anhba.jpg" alt="Ảnh 3">
+            </div>
+
+            <div class="photo p4">
+                <img src="anhbon.jpg" alt="Ảnh 4">
+            </div>
+
+            <div class="photo p5">
+                <img src="anhnam.jpg" alt="Ảnh 5">
+            </div>
+
+            <div class="photo p6">
+                <img src="anhsau.jpg" alt="Ảnh 6">
+            </div>
+
+            <div class="photo p7">
+                <img src="anhbay.jpg" alt="Ảnh 7">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

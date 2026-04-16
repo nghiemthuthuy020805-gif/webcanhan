@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kỹ năng</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #eaf6ff, #fff6f8);
+            padding: 30px 15px;
+            color: #1d3d73;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .title-box {
+            width: fit-content;
+            margin: 0 auto 30px;
+            background: #fff3cc;
+            color: #1d3d73;
+            padding: 16px 35px;
+            border-radius: 25px;
+            border: 3px solid #f3df9b;
+            font-size: 34px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .card {
+            background: #fff;
+            border: 3px solid #dcecff;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .card-title {
+            background: linear-gradient(to right, #dff1ff, #eef8ff);
+            padding: 18px 22px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #163d76;
+        }
+
+        .content {
+            padding: 22px 28px;
+            font-size: 19px;
+            line-height: 1.9;
+        }
+
+        .content ul {
+            padding-left: 25px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 25px;
+            text-decoration: none;
+            background: #9ed5ff;
+            color: #123d7a;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #7fc3f8;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #7fc3f8;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .title-box {
+                font-size: 26px;
+                padding: 14px 22px;
+            }
+
+            .card-title {
+                font-size: 21px;
+            }
+
+            .content {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title-box">KỸ NĂNG CỦA MÌNH</div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-title">🌷 Kỹ năng mềm</div>
+                <div class="content">
+                    <ul>
+                        <li>Giao tiếp thân thiện và lịch sự</li>
+                        <li>Làm việc nhóm hiệu quả</li>
+                        <li>Quản lý thời gian cá nhân khá tốt</li>
+                        <li>Biết lắng nghe và tiếp thu góp ý</li>
+                        <li>Chủ động học hỏi những kiến thức mới</li>
+                        <li>Cẩn thận và có trách nhiệm trong công việc</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">💻 Kỹ năng chuyên môn</div>
+                <div class="content">
+                    <ul>
+                        <li>Sử dụng HTML để xây dựng cấu trúc trang web</li>
+                        <li>Dùng CSS để thiết kế giao diện và bố cục</li>
+                        <li>Biết JavaScript cơ bản để tạo tương tác đơn giản</li>
+                        <li>Thiết kế giao diện web cá nhân ở mức cơ bản</li>
+                        <li>Sử dụng Word, PowerPoint và các công cụ học tập văn phòng</li>
+                        <li>Có khả năng đọc hiểu và chỉnh sửa code theo yêu cầu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <a href="taotrang.html" class="back-btn">← Quay lại trang chủ</a>
+    </div>
+</body>
+</html>

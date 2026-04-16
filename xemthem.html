@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin chi tiết</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #eaf6ff, #fff6f8);
+            color: #1d3d73;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .title-box {
+            width: fit-content;
+            margin: 0 auto 30px;
+            background: #fff3cc;
+            color: #1d3d73;
+            padding: 16px 35px;
+            border-radius: 25px;
+            border: 3px solid #f3df9b;
+            font-size: 34px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        }
+
+        .main-card {
+            background: rgba(255,255,255,0.95);
+            border: 4px solid #d9ebff;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .section {
+            background: #ffffff;
+            border: 3px solid #dcecff;
+            border-radius: 22px;
+            overflow: hidden;
+            margin-bottom: 22px;
+        }
+
+        .section-title {
+            background: linear-gradient(to right, #dff1ff, #eef8ff);
+            padding: 16px 20px;
+            font-size: 23px;
+            font-weight: bold;
+            color: #163d76;
+        }
+
+        .section-content {
+            padding: 20px 24px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .section-content ul {
+            padding-left: 24px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #9ed5ff;
+            color: #123d7a;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #7fc3f8;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .back-btn:hover {
+            background: #7fc3f8;
+        }
+
+        @media (max-width: 768px) {
+            .title-box {
+                font-size: 26px;
+                padding: 14px 22px;
+            }
+
+            .main-card {
+                padding: 20px 15px;
+            }
+
+            .section-title {
+                font-size: 20px;
+            }
+
+            .section-content {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title-box">THÔNG TIN CHI TIẾT</div>
+
+        <div class="main-card">
+            <div class="section">
+                <div class="section-title">🎓 Trình độ học vấn</div>
+                <div class="section-content">
+                    <p>Hiện tại mình đang là sinh viên tại Học viện Tài chính.</p>
+                    <p>Chuyên ngành/ngành học: Hệ thống thông tin quản lý</p>
+                    <p>Năm học: 2025-2026</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">⭐ Kỹ năng</div>
+                <div class="section-content">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Thuyết trình</li>
+                        <li>Thiết kế giao diện web cơ bản</li>
+                        <li>Làm việc nhóm</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">📜 Các chứng chỉ đã học</div>
+                <div class="section-content">
+                    <ul>
+                        <li>Chứng chỉ A</li>
+                        <li>Chứng chỉ B</li>
+                        <li>Chứng chỉ C</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">📘 Các chứng chỉ đang học</div>
+                <div class="section-content">
+                    <ul>
+                        <li>Chứng chỉ tiếng Anh</li>
+                        <li>Chứng chỉ Tin học</li>
+                        <li>Khóa học lập trình web nâng cao</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">💼 Công việc hiện tại</div>
+                <div class="section-content">
+                    <p>Hiện tại mình đang là sinh viên và đang làm thêm công việc gia sư.</p>
+                    <p>Tương lai, mình mong muốn trở thành giáo viên.</p>
+                </div>
+            </div>
+
+            <a href="taotrang.html" class="back-btn">← Quay lại trang chủ</a>
+        </div>
+    </div>
+</body>
+</html>
